@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="GCss/games_za_console.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: "ubuntu", sans-serif;
+      background-image: url("GImages/GCar.jpg");
+      background-size: cover;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #570a5e;
+      padding: 10px 20px;
+      color: white;
+      
+    }
+
+    .navbar .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background- 0.3s;
+    }
+
+    .nav-links a:hover {
+      background-color: black;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Iceland&family=Rock+Salt&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div id="root">
+
+              <!-- thy Nav start -->
+        <nav class="navbar">
+          <div class="logo">Oribson</div>
+          <div class="hamburger" onclick="toggleMenu()">☰</div>
+          <div class="nav-links" id="navLinks">
+            <a href="#">Games</a>
+            <a href="trailers.html">Trailers</a>
+            <a href="about.html">About</a>
+          </div>
+        </nav>
+          <!-- thy Nav end -->
+
+          <div id="master">
+
+            <div class="container">
+                <span style="--i:1"> <img src="GImages/Tang/001.jpg" alt="pic"></span>
+                <span style="--i:2"> <img src="GImages/Tang/005.jpg" alt="pic"></span>
+                <span style="--i:3"> <img src="GImages/Tang/004.jpg" alt="pic"></span>
+                <span style="--i:4"> <img src="GImages/Tang/012.jpg" alt="pic"></span>
+                <span style="--i:5"> <img src="GImages/Tang/014.jpeg" alt="pic"></span>
+                <span style="--i:6"> <img src="GImages/Tang/008.jpg" alt="pic"></span>
+                <span style="--i:7"> <img src="GImages/Tang/010.jpg" alt="pic"></span>
+                <span style="--i:8"> <img src="GImages/Tang/015.jpg" alt="pic"></span>
+            </div>
+        </div>
+        <div id="lipa">
+          <h5>Order from Oribson</h5>
+          <form action="https://flexflex.pythonanywhere.com/api/mpesa_payment" method="post">
+              <input type="tel" placeholder="Mpesa Number" name="phone" required>
+              <input type="submit" value="Order" name="amount">
+          </form>
+          <button onclick="toa()">Cancel</button>
+      </div>
+
+          <!-- Magems collection 1 -->
+          <div class="magems">
+
+            <div class="type1">
+              <img class="thumbnail" src="GImages/Tang/001.jpg" width="300" height="350" alt="cover">
+              <p>
+                <span class="jina">Assasins Creed S</span> <br>
+                <span class="rate">Rating 8.8 <img src="GImages/star.png" alt="" width="20" height="20"></span> <br>
+
+                <p class="doh">1,600 KES</p>
+                <a href="#" class="btn" onclick=buy()><button>Buy Now</button></a>
+                
+              </p>
+            </div>
+
+            <div class="type1">
+              <img class="thumbnail" src="GImages/Tang/003.jpg" width="300" height="350" alt="cover">
+              <p>
+                <span class="jina">FC 24</span> <br>
+                <span class="rate">Rating 7.3 <img src="GImages/star.png" alt="" width="20" height="20"></span> <br>
+
+                <p class="doh">750 KES</p>
+                <a href="#" class="btn" onclick=buy()><button>Buy Now</button></a>
+                
+              </p>
+            </div>
+
+            <div class="type1">
+              <img class="thumbnail" src="GImages/Tang/005.jpg" width="300" height="350" alt="cover">
+              <p>
+                <span class="jina">GTA 5 Xbox</span> <br>
+                <span class="rate">Rating 9.2 <img src="GImages/star.png" alt="" width="20" height="20"></span> <br>
+
+                <p class="doh">5,450 KES</p>
+                <a href="#" class="btn" onclick=buy()><button>Buy Now</button></a>
+              </p>
+            </div>
+
+
+          </div>
+
+          <!-- AD 1 -->
+           <div class="ad">
+            <div id="picha">
+                <img src="GImages/fortnite-min.jpg" alt="" width="100%" height="300">
+            </div>
+
+            <div id="maneno">
+              <h4>🎮 Jump Into the Action with Fortnite!</h4>
+              Build, battle, and survive in the world’s most popular free-to-play game. Squad up with friends, explore epic maps, and unleash your creativity in ever-evolving game modes. Are you ready to claim Victory Royale?
+
+              <br><br>
+              <span><del>Was Ksh 780</del> is Ksh 499</span>
+            </div>
+           </div>
+
+           <!-- Magems collection 2 -->
+           <div class="magems">
+
+            <div class="type1">
+              <img class="thumbnail" src="GImages/Tang/004.jpg" width="300" height="350" alt="cover">
+              <p>
+                <span class="jina">FC 25 Xbox</span> <br>
+                <span class="rate">Rating 8.5 <img src="GImages/star.png" alt="" width="20" height="20"></span> <br>
+
+                <p class="doh">2,259 KES</p>
+                <a href="#" class="btn" onclick=buy()><button>Buy Now</button></a>
+                
+              </p>
+            </div>
+
+            <div class="type1">
+              <img class="thumbnail" src="GImages/Tang/006.jpg" width="300" height="350" alt="cover">
+              <p>
+                <span class="jina">The Last of US R</span> <br>
+                <span class="rate">Rating 7.2<img src="GImages/star.png" alt="" width="20" height="20"></span> <br>
+
+                <p class="doh">1,990 KES</p>
+                <a href="#" class="btn" onclick=buy()><button>Buy Now</button></a>
+                
+              </p>
+            </div>
+
+            <div class="type1">
+              <img class="thumbnail" src="GImages/Tang/007.jpeg" width="300" height="350" alt="cover">
+              <p>
+                <span class="jina">Mortal Kombat 11</span> <br>
+                <span class="rate">Rating 7.4 <img src="GImages/star.png" alt="" width="20" height="20"></span> <br>
+
+                <p class="doh"> KES</p>
+                <a href="#" class="btn" onclick=buy()><button>Buy Now</button></a>
+              </p>
+            </div>
+
+
+          </div>
+    
+          <!-- Magems collection 3 -->
+          <div class="magems">
+
+            <div class="type1">
+              <img class="thumbnail" src="GImages/Tang/008.jpg" width="300" height="350" alt="cover">
+              <p>
+                <span class="jina">NFS Heat</span> <br>
+                <span class="rate">Rating 7.2 <img src="GImages/star.png" alt="" width="20" height="20"></span> <br>
+
+                <p class="doh">780 KES</p>
+                <a href="#" class="btn" onclick=buy()><button>Buy Now</button></a>
+                
+              </p>
+            </div>
+
+            <div class="type1">
+              <img class="thumbnail" src="GImages/Tang/010.jpg" width="300" height="350" alt="cover">
+              <p>
+                <span class="jina">The Last of US 1</span> <br>
+                <span class="rate">Rating 5.5<img src="GImages/star.png" alt="" width="20" height="20"></span> <br>
+
+                <p class="doh">990 KES</p>
+                <a href="#" class="btn" onclick=buy()><button>Buy Now</button></a>
+                
+              </p>
+            </div>
+
+            <div class="type1">
+              <img class="thumbnail" src="GImages/Tang/012.jpg" width="300" height="350" alt="cover">
+              <p>
+                <span class="jina">Red Dead Redemption</span> <br>
+                <span class="rate">Rating 9.1 <img src="GImages/star.png" alt="" width="20" height="20"></span> <br>
+
+                <p class="doh">3,499 KES</p>
+                <a href="#" class="btn" onclick=buy()><button>Buy Now</button></a>
+                
+              </p>
+            </div>
+  
+    </div>
+ 
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("active");
+    }
+
+    var element = document.getElementById("lipa");
+    function buy() {
+     
+      if (element.style.display === "none") {
+          element.style.display = "block";
+      } else {
+          element.style.display = "none";
+      }
+
+  }
+     function toa(){
+        element.style.display = "none";
+        event.preventDefault();
+      }
+  
+    
+  </script>
+
+</body>
+</html>

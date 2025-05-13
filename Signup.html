@@ -1,0 +1,30 @@
+<!-- SIGNUP -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="GCss/Loger.css">
+    <script src="GJs/Signup.js" defer></script>
+</head>
+<body>
+    <div id="master-fom">
+
+        <div id="fom-bg">
+            <form action="http://127.0.0.1:3560/gameson/gib/add_user" id="fom" method="post">
+                <b><p id="fom-head">Create an OribSon Account</p></b>
+                <p id="error"></p>
+                <input type="email" name="email" id="email" placeholder="email@example.com"> <br><br>
+                <input type="password" name="password" id="password1" placeholder="password"> <br><br>
+                <input type="password" id="password2" placeholder="Confirm password"><br><br>
+                <input type="submit" value="SignUp" id="submit-btn">
+                <p>Already have an account? <a href="Signin.html">Login</a></p>
+            </form>
+        </div>
+
+    </div>
+   
+    
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contact.css"/>
+  <style>
+    /* General reset and body styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: linear-gradient(120deg, #ff9a8b, #f7c8b7);
+    }
+
+    /* Contact container and section */
+    .contact-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+      transform: translateY(100px);
+      animation: slideIn 1s ease-out forwards;
+    }
+
+    @keyframes slideIn {
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    h2 {
+      text-align: center;
+      color: #444;
+      font-size: 2rem;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1rem;
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    /* Contact form styling */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #ff7f50;
+      box-shadow: 0 0 5px rgba(255, 127, 80, 0.5);
+    }
+
+    /* Send Message button */
+    button {
+      background-color: #ff7f50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #ff6a3a;
+      transform: scale(1.1);
+    }
+
+    /* Star Rating section */
+    .star-rating {
+      direction: rtl;
+      display: inline-flex;
+      font-size: 2rem;
+      margin-top: 10px;
+      opacity: 0;
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    .star-rating input {
+      display: none;
+    }
+
+    .star-rating label {
+      cursor: pointer;
+      color: lightgray;
+      transition: all 0.3s ease;
+    }
+
+    .star-rating input:checked ~ label,
+    .star-rating label:hover,
+    .star-rating label:hover ~ label {
+      color: gold;
+      transform: scale(1.2);
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Thank You Message */
+    #thankYouMessage, #ratingThanks {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #32CD32;
+      font-size: 1.2rem;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+    #p{
+      color: #b42323;
+    }
+  </style>
+</head>
+<body>
+  <section id="contact" class="contact">
+    <div class="contact-container">
+      <h2>Contact Us</h2>
+      <p id="p">We'd love to hear from you! Reach out for questions, feedback, or just to say hi.</p>
+      <form class="contact-form" onsubmit="handleFormSubmit(event)">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div id="thankYouMessage"></div>
+
+      <div id="ratingSection" style="display: none;">
+        <h3>Rate our service:</h3>
+        <div class="star-rating">
+          <input type="radio" id="star5" name="rating" value="5" onclick="submitRating(5)">
+          <label for="star5">&#9733;</label>
+          <input type="radio" id="star4" name="rating" value="4" onclick="submitRating(4)">
+          <label for="star4">&#9733;</label>
+          <input type="radio" id="star3" name="rating" value="3" onclick="submitRating(3)">
+          <label for="star3">&#9733;</label>
+          <input type="radio" id="star2" name="rating" value="2" onclick="submitRating(2)">
+          <label for="star2">&#9733;</label>
+          <input type="radio" id="star1" name="rating" value="1" onclick="submitRating(1)">
+          <label for="star1">&#9733;</label>
+        </div>
+        <div id="ratingThanks"></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function handleFormSubmit(event) {
+      event.preventDefault(); // Prevents page reload
+
+      // Display thank you message with animation
+      const thankYouMessage = document.getElementById("thankYouMessage");
+      thankYouMessage.innerText = "Thank you for your review. Continue enjoying our services.";
+      thankYouMessage.style.opacity = 1;
+
+      // Show the rating section
+      const ratingSection = document.getElementById("ratingSection");
+      ratingSection.style.display = "block";
+
+      // Clear form fields after submission
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+
+      // Reset the star rating
+      let ratingInputs = document.getElementsByName("rating");
+      for (let i = 0; i < ratingInputs.length; i++) {
+        ratingInputs[i].checked = false;
+      }
+
+      // Hide the thank-you message after 5 seconds and reset form
+      setTimeout(function () {
+        thankYouMessage.innerText = "";
+        ratingSection.style.display = "none";
+        document.getElementById("ratingThanks").innerText = "";
+      }, 5000); // Hides the message and rating section after 5 seconds
+    }
+
+    function submitRating(stars) {
+      const ratingThanks = document.getElementById("ratingThanks");
+      ratingThanks.innerText = `Thank you for rating us ${stars} star${stars > 1 ? 's' : ''}!`;
+      ratingThanks.style.opacity = 1;
+    }
+  </script>
+</body>
+</html>

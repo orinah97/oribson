@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="GCss/trailers.css">
+
+    <style>
+        body {
+          margin: 0;
+          font-family: "ubuntu", sans-serif;
+        }
+    
+        .navbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #570a5e;
+          padding: 10px 20px;
+          color: white;
+          
+        }
+    
+        .navbar .logo {
+          font-size: 20px;
+          font-weight: bold;
+        }
+    
+        .nav-links {
+          display: flex;
+          gap: 20px;
+        }
+    
+        .nav-links a {
+          color: white;
+          text-decoration: none;
+          padding: 8px 12px;
+          border-radius: 4px;
+          transition: background 0.3s;
+        }
+    
+        .nav-links a:hover {
+          background-color: black;
+        }
+    
+        .hamburger {
+          display: none;
+          font-size: 24px;
+          cursor: pointer;
+        }
+    
+        @media (max-width: 768px) {
+          .nav-links {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            background-color: #333;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            padding: 10px 0;
+          }
+    
+          .nav-links.active {
+            display: flex;
+          }
+    
+          .hamburger {
+            display: block;
+          }
+        }
+      </style>
+    
+</head>
+<body>
+    
+    <div id="root">
+             <!-- thy Nav start -->
+             <nav class="navbar">
+                <div class="logo">Oribson</div>
+                <div class="hamburger" onclick="toggleMenu()">☰</div>
+                <div class="nav-links" id="navLinks">
+                  <a href="games.html">Games</a>
+                  <a href="#">Trailers</a>
+                  <a href="about.html">About</a>
+                </div>
+              </nav>
+                <!-- thy Nav end -->
+
+            <div id="mavidaa">
+                <div class="vidaa">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Yf2nTwqQLfU?si=xH9S5uQve1p3gEVw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="vidaa">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/pBM2xyco_Kg?si=-4CviKF9JXUFNEYw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="vidaa">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/uX7aw9lYB2w?si=8NQm6Ay99Yk9uxy9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="vidaa">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/QdBZY2fkU-0?si=ueW4ZiVB9ojkL89h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="vidaa">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/hfJ4Km46A-0?si=yvNPr1ust9E_hh1V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="vidaa">
+                   <iframe width="560" height="315" src="https://www.youtube.com/embed/h0uxvKUjsj4?si=LCkK9sjLtnCrD1Uj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="vidaa">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/UoTams2yc0s?si=woJgMZTh8pfGbJxt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                 </div>
+
+                 <div class="vidaa">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5uvwfskYwl0?si=iPaHZcSapB8TOAOz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                 </div>
+
+                 <div class="vidaa">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8X2kIfS6fb8?si=ZmItnSJoGVOH2EGi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                 </div>
+
+                 <div class="vidaa">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5xy4n73WOMM?si=siYtlL3kufe5Cerh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                 </div>
+
+                
+                
+
+                
+
+            </div>
+    </div>
+</body>
+</html>

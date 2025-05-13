@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Money Flow Animation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Container for button and form */
+    .container {
+      text-align: center;
+    }
+
+    /* Button styling */
+    .btn {
+      background-color: #1e90ff;
+      color: white;
+      padding: 20px 40px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #4682b4;
+    }
+
+    /* Form styling */
+    .form-container {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      margin: 20px auto;
+    }
+
+    .form-container input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    /* Money effect - money elements (simulated with circles) */
+    .money {
+      position: absolute;
+      background-color: gold;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      opacity: 0;
+      pointer-events: none;
+      animation: flow 2s forwards;
+    }
+
+    /* Animation for money flowing into the form */
+    @keyframes flow {
+      0% {
+        opacity: 1;
+        transform: translateY(-100px) translateX(0);
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(150px) translateX(30px);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(300px) translateX(50px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Button to trigger the effect -->
+    <button class="btn" onclick="animateMoney()">Add Money</button>
+
+    <!-- The form that shows up after the button is clicked -->
+    <div class="form-container" id="mpesaForm">
+      <h2>MPESA Form</h2>
+      <input type="text" placeholder="Enter your number" required>
+      <input type="number" placeholder="Enter amount" required>
+      <button>Submit</button>
+    </div>
+  </div>
+
+  <script>
+    // Function to create the money effect
+    function animateMoney() {
+      const form = document.getElementById("mpesaForm");
+      form.style.display = 'block'; // Show the form
+      const button = document.querySelector('.btn');
+      const buttonRect = button.getBoundingClientRect();
+      const formRect = form.getBoundingClientRect();
+
+      // Create multiple "money" elements (simulating coins or bills)
+      for (let i = 0; i < 10; i++) {
+        const moneyElement = document.createElement('div');
+        moneyElement.classList.add('money');
+
+        // Position the "money" at the button location
+        moneyElement.style.left = buttonRect.left + buttonRect.width / 2 + 'px';
+        moneyElement.style.top = buttonRect.top + buttonRect.height / 2 + 'px';
+
+        // Append the "money" to the body
+        document.body.appendChild(moneyElement);
+
+        // Use setTimeout to remove the money element after the animation ends
+        setTimeout(() => {
+          moneyElement.remove();
+        }, 2000); // Matches the animation duration (2 seconds)
+      }
+    }
+  </script>
+
+</body>
+</html>

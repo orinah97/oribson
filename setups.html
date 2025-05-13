@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setups</title>
+    <link rel="stylesheet" href="yeah.css">
+    
+    <style>
+      #lipa{
+        width: 300px;
+        background-color: blue;
+        height: 200px;
+        translate: 500px 400px;
+        position: fixed;
+        z-index: 1;
+        display: none;
+
+
+      }
+      #lipa input{
+        font-size: 20px;
+        color: black;
+      }
+    </style>
+      <style>
+        h1 {
+          font-size: 3rem; /* Slightly large text */
+          font-weight: bold; /* Bold text */
+          color: #ff69b4; /* Hot pink color */
+          text-align: center; /* Center the text */
+          margin-top: 20px; /* Space from the top */
+          text-transform: uppercase; /* Uppercase text */
+        }
+      </style>
+    
+</head>
+<body>
+  <h1>Featured Gaming Setups</h1>
+  <div id="lipa">
+    <h5>Order from Oribson</h5>
+    <form action="https://flexflex.pythonanywhere.com/api/mpesa_payment" method="post">
+        <input type="tel" placeholder="Mpesa Number" name="phone" required>
+        <input type="submit" value="Order" name="amount">
+    </form>
+    <button onclick="toa()">Cancel</button>
+</div>
+
+<style>
+  /* Overall container style */
+  #lipa {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    font-family: Arial, sans-serif;
+    height: 300px;
+  }
+
+  /* Heading style */
+  #lipa h5 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  /* Form inputs */
+  #lipa input[type="tel"], #lipa input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  /* Styling for the phone input */
+  #lipa input[type="tel"] {
+    background-color: #f1f1f1;
+    color: #333;
+  }
+
+  /* Styling for the submit button */
+  #lipa input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  /* Hover effect for the submit button */
+  #lipa input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  /* Cancel button styling */
+  #lipa button {
+    width: 100%;
+    padding: 12px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  /* Hover effect for the cancel button */
+  #lipa button:hover {
+    background-color: #e53935;
+  }
+
+  /* Responsive design */
+  @media (max-width: 600px) {
+    #lipa {
+      width: 90%;
+      padding: 15px;
+    }
+
+    #lipa h5 {
+      font-size: 18px;
+    }
+  }
+   /* Simple styling for the search input */
+   #search-container {
+    margin: 20px;
+    text-align: center;
+  }
+
+  #searchInput {
+    padding: 10px;
+    font-size: 16px;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .content {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .search-item {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+  }
+
+  /* Hidden content */
+  .hidden {
+    display: none;
+  }
+</style>
+</script>
+
+
+-
+    <section class="products">
+      <h1 >Featured gaming setups</h1>
+        <div class="product-grid">
+          <div  class="product-card" >
+            <img src="images\wired pad.webp" alt="Setup 1">
+            <h3>Wired gaming pc pads</h3>
+            <p>$2,499</p>
+            <a href="#" class="btn" onclick=buy()>Buy Now</a>
+          </div>
+          <div class="product-card">
+            <img src="images\gaming.png" alt="Setup 2">
+            <h3>Gaming Chair</h3>
+            <p>$1,899</p>
+            <a href="#" class="btn" onclick=buy()>Buy Now</a>
+          </div>
+          <div class="product-card">
+            <img src="images\xbox pad.jpg" alt="Setup 3">
+            <h3>Xbox pads </h3>
+            <p>$1,499</p>
+            <a href="#" class="btn" onclick=buy()>Buy Now</a>
+          </div>
+        </div>
+        <br>
+    
+        <div class="product-grid">
+            <div class="product-card">
+              <img src="images\download.jpeg" alt="Setup 1">
+              <h3>Full Gaming Setup</h3>
+              <p>$2,499</p>
+              <a href="#" class="btn" onclick=buy()>Buy Now</a>
+            </div>
+            <div class="product-card">
+              <img src="images\lapi.webp" alt="Setup 2">
+              <h3>Gaming Laptop</h3>
+              <p>$1,899</p>
+              <a href="#" class="btn" onclick=buy()>Buy Now</a>
+            </div>
+            <div class="product-card">
+              <img src="images\ps5 pad.webp" alt="Setup 3">
+              <h3>Ps5 pad</h3>
+              <p>$1,499</p>
+              <a href="#" class="btn" onclick=buy()>Buy Now</a>
+            </div>
+          </div>
+          <br>
+          <div class="product-grid">
+            <div class="product-card">
+              <img src="images\pad.webp" alt="Setup 1">
+              <h3>Laptop Cooler</h3>
+              <p>$2,499</p>
+              <a href="#" class="btn" onclick=buy()>Buy Now</a>
+            </div>
+            <div class="product-card">
+              <img src="images\me.jpg" alt="Setup 2">
+              <h3>RTB Glowing keyboard</h3>
+              <p>$1,899</p>
+              <a href="#" class="btn" onclick=buy()>Buy Now</a>
+            </div>
+            <div class="product-card">
+              <img src="images\mat.webp" alt="Setup 3">
+              <h3>Laptop mat</h3>
+              <p>$1,499</p>
+              <a href="#" class="btn" onclick=buy()>Buy Now</a>
+            </div>
+          </div>
+          <br>
+    
+    
+          <div class="product-grid">
+            <div class="product-card">
+              <img src="images\i.jpg" alt="images\me.jpg">
+              <h3>laptop holder</h3>
+              <p>$2,499</p>
+              <a href="#" class="btn" onclick=buy()>Buy Now</a>
+            </div>
+            <div class="product-grid">
+            <div class="product-card">
+              <img src="images\cpu cooler.avif" alt="images\me.jpg">
+              <h3>CPU cooler</h3>
+              <p>$2,499</p>
+              <a href="#" class="btn" onclick=buy()>Buy Now</a>
+            </div>
+            <br>
+            
+             
+      </section>
+    
+    <script>
+        var element = document.getElementById("lipa");
+        function buy() {
+       
+        if (element.style.display === "none") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+
+    }
+        function toa(){
+          element.style.display = "none";
+          event.preventDefault();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+body{
+    background-image: url("GImages/GCar.jpg");
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0px;
+    padding: 0px;
+}
+
+#mavidaa{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.vidaa{
+    background-color: aqua;
+    width: 560px;
+    height: 315px;
+    position: relative;
+    margin: 40px;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 360deg;
+    inherits: false;
+}
+.vidaa::after{
+    position: absolute;
+    content: "";
+    background-image: conic-gradient(from var(--angle),blue,hotpink,blue,hotpink,blue);
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50%  -50%;
+    z-index: -1;
+    padding: 10px;
+    border-radius: 8px;
+    animation: spin 3s linear infinite;
+}
+@keyframes spin {
+    from{
+        --angle:360deg;
+    }
+    to{
+        --angle:0deg;
+    }
+    
+}

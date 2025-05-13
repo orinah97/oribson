@@ -1,0 +1,167 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Mode Styles */
+body.light-mode {
+    background-color: #f4f4f4;
+    color: #111;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Header */
+header h1 {
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.buttons {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 18px 40px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+.apk-btn {
+    background: linear-gradient(135deg, #4CAF50, #2E8B57);
+    color: white;
+    box-shadow: 0 8px 16px rgba(76, 175, 80, 0.5);
+}
+
+.exe-btn {
+    background: linear-gradient(135deg, #008CBA, #00BFFF);
+    color: white;
+    box-shadow: 0 8px 16px rgba(0, 140, 186, 0.5);
+}
+
+.setup-btn {
+    background: linear-gradient(135deg, #FF9800, #FF5722);
+    color: white;
+    box-shadow: 0 8px 16px rgba(255, 152, 0, 0.5);
+}
+
+.games-btn {
+    background: linear-gradient(135deg, #9C27B0, #8E24AA);
+    color: white;
+    box-shadow: 0 8px 16px rgba(156, 39, 176, 0.5);
+}
+
+/* Hover Effects */
+.btn:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Toggle Theme Styles */
+.theme-toggle {
+    margin-top: 40px;
+    font-size: 1rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Sections for Gaming Setup and Games */
+section {
+    padding: 40px;
+    margin-top: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+    margin-bottom: 20px;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+section p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
