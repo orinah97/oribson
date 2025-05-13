@@ -6,10 +6,21 @@
     <title>Gaming Hub</title>
     <link rel="stylesheet" href="home.css">
     <script src="home.js" defer></script>
+    <style>
+        .buttons{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #wabuda{
+            background-image: linear-gradient(120deg,blue,purple,hotpink);
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
 </head>
 <body>
     <!-- Background Music -->
-    <audio id="bg-music" controls autoplay>
+    <audio id="bg-music"  autoplay>
         <source src="game-of-thrones-theme-song-ringtone-30782.mp3"  type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
@@ -17,7 +28,7 @@
     <!-- Main Content -->
     <div class="container">
         <header>
-            <h1>Welcome to Oribson Hub</h1>
+            <h1 id="wabuda">Welcome to Oribson Hub</h1>
             <p>Your ultimate gaming setup and game-selling platform</p>
         </header>
 
