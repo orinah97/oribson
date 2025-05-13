@@ -3,76 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oribson</title>
-    <style>
-        body{
-            background-image: url("GImages/GCar.jpg");
-            background-color: black;
-            background-position: center;
-            background-size: cover;
-            background-attachment: fixed;
-            margin: 0px;
-            padding: 0px;
-        }
-    </style>
-    <link rel="stylesheet" href="GCss/index.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <!-- G fonts -->
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Rock+Salt&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-
+    <title>Gaming Hub</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="home.js" defer></script>
 </head>
 <body>
-    
-    <div id="logo">
-        <img src="GImages/Tang/Untitled design (2).png" alt="logo" width="250" height="200">
-    </div>
-    
-    <div id="master">
+    <!-- Background Music -->
+    <audio id="bg-music" controls autoplay>
+        <source src="game-of-thrones-theme-song-ringtone-30782.mp3"  type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
 
-        <div class="container">
-            <span style="--i:1"> <img src="GImages/Tang/001.jpg" alt="pic"></span>
-            <span style="--i:2"> <img src="GImages/Tang/005.jpg" alt="pic"></span>
-            <span style="--i:3"> <img src="GImages/Tang/004.jpg" alt="pic"></span>
-            <span style="--i:4"> <img src="GImages/Tang/012.jpg" alt="pic"></span>
-            <span style="--i:5"> <img src="GImages/Tang/014.jpeg" alt="pic"></span>
-            <span style="--i:6"> <img src="GImages/Tang/008.jpg" alt="pic"></span>
-            <span style="--i:7"> <img src="GImages/Tang/010.jpg" alt="pic"></span>
-            <span style="--i:8"> <img src="GImages/Tang/015.jpg" alt="pic"></span>
+    <!-- Main Content -->
+    <div class="container">
+        <header>
+            <h1>Welcome to Oribson Hub</h1>
+            <p>Your ultimate gaming setup and game-selling platform</p>
+        </header>
+
+        <div class="buttons">
+            <a href="https://drive.google.com/uc?export=download&id=1G8CM_Gj-D6asqNGqsrxsKgPTtr0rXydi" download>
+                <button class="btn ">Download APK</button>
+              </a>
+              <a href="https://drive.google.com/uc?export=download&id=19doBSdf6pJPXYvJC-EDOZtIs2o3VVOhs" download>
+                <button class="btn">Download EXE</button>
+              </a>
+                <a href="https://drive.google.com/uc?export=download&id=1bHsAUi2KGh_my0_pUHxdNkAI5CtAS4fP" download>
+                <button class="btn">Download deb</button>
+              </a>
+            <a href="surface.html" class="btn setup-btn">Gaming Setups</a>
+            <a href="games.html" class="btn games-btn">Games</a>
         </div>
-    </div>
 
-    <div id="bout">
-        Oribson: built for players, powered by nostalgia, driven by next-gen fire. The game never ended—it just got an upgrade <br>
-        <button>Login</button> <button>Sigin</button> <button id="mgeni">Guest</button>
-    </div>
-
-    <div id="bout_long">
-        <div>
-            At Oribson, we speak fluent gamer. This isn’t just a place to buy hardware or pick up the latest title it’s a home base for those who live for the grind, the glory, and the late night wins. From high-end rigs to hidden gems, we fuel your passion, your progress, and your play. Because here, gaming isn’t a hobby it’s the way we connect, compete, and create.
+        <!-- Toggle Theme Button -->
+        <div class="theme-toggle">
+            <label class="switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider"></span>
+            </label>
+            <p>Toggle Light/Dark Mode</p>
         </div>
+
+        <!-- Sections for Gaming Setup and Games -->
+        <section id="gaming-setup">
+            <h2>Gaming Setups</h2>
+            <p>Browse the best gaming setups, from budget to high-end builds.</p>
+        </section>
+
+        <section id="games">
+            <h2>Games</h2>
+            <p>Explore a wide variety of games for all platforms.</p>
+        </section>
     </div>
 
-    <div id="futa">
-        <p id="label">Oribson games</p> <br>
-        <p>&copy; 2025</p>
-    </div>
-    
-
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed(".mesej",{
-            strings : ["Play hard. Stay real.", "Lag is temporary. Victory is forever.", "Born to game. Built for wins.", "Start the game, change the world.", "Level up or stay stuck.", "No cheat codes—just hustle.", "Stack your XP, flex your skills.", "Game loud. Dream bigger.", "You miss 100% of the shots you don't click.", "Every noob was once a legend in the making.", "Real ones don’t rage quit.", "New day, new drops, new dubs.", "One life. Infinite plays.", "From spawn to boss level—we grindin'.", "You don’t just play Gameson. You rep it."],
-
-            typeSpeed:60,
-            backSpeed:30,
-            loop:true
-        })
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
-
-
-<!-- fuck you  -->
